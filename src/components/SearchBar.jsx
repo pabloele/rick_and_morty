@@ -1,5 +1,7 @@
+import styles from './SearchBar.module.css'
+
 export default function SearchBar(props) {
-   console.log('asdasdasd',props)
+  
    return (
       <div>
             <input type='search' />

@@ -1,0 +1,8 @@
+.cards {
+    display: flex;
+    padding: 8px;
+    border: 20px solid rgba(73, 72, 85, 0.946);
+    border-radius: 15px;
+
+}
+
