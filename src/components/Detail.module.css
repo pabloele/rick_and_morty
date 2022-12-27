@@ -1,0 +1,17 @@
+.texto{
+    color: white;
+    margin-left: 100px;
+}
+
+.detail {
+    margin-top: 80px;
+    display:flex;
+}
+
+
+img{
+    width: 200px;
+    padding: 20px;
+    height: auto;
+    margin-left: 50px;
+}
