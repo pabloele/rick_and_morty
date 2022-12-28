@@ -1,16 +1,21 @@
-import { useState } from 'react'
+import { useState , useEffect} from 'react'
 import styles from './App.module.css'
 import Cards from './components/Cards.jsx'
 import NavBar from './components/NavBar'
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route, useLocation, useNavigate} from 'react-router-dom'
 import About from "./components/About"
 import Login from './components/Login'
 import Detail from './components/Detail'
 
 
+
 function App () {
  const [characters,setCharacters] = useState([])
- 
+ let pathname = useLocation();
+ let [access,setAccess] = useState(false);
+ let username = 'pablo@gmail.com'
+ let password = '1234'
+ const navigate = useNavigate();
  
  function onSearch(id) {
   
@@ -39,21 +44,30 @@ function App () {
 
 
  function onClose(id) {
-   setCharacters((data) => { //data es igual a characters
+   setCharacters((data) => { 
     return data.filter((e) => e.id !== id)
  })
  }
+  
+ function login (userData) {
+      if (userData.username === username && userData.password === password) {
+        setAccess(true)
+        navigate('/home')
+      } 
+ }
+
+ useEffect(() => {
+   !access && navigate('/');
+}, [access]);
 
   return (      
      
     <div className={styles.App} style={{ padding: '25px' }}>
        <div className={styles.container}>
-          <div>
-            <NavBar
-              onSearch={onSearch}
-            />
-
-
+          <div >
+            
+            {pathname.pathname !== "/" &&   <NavBar onSearch={onSearch}/>}
+           
           </div>
        
           <hr />
@@ -75,3 +89,5 @@ function App () {
 }
 
 export default App
+
+

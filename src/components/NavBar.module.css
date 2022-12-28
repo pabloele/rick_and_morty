@@ -6,4 +6,11 @@
     border: 2px solid black;
     border-radius: 6px;
     padding: 8px;
+    
+}
+
+.oculto {
+    display: none;
+    border: 452px solid black;
+  
 }

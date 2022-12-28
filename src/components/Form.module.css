@@ -1,0 +1,13 @@
+.divLog {
+    display: flex;
+    flex-direction: column;
+    
+    background-color: gray;
+    height:auto;
+    width: 300px;
+    
+}
+.danger {
+    
+    color: rgb(255, 11, 11);
+}
