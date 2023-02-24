@@ -1,5 +1,6 @@
 .container {
-   background-image: url("https://www.denofgeek.com/wp-content/uploads/2022/09/rick-and-morty-season-6-episode-1.jpg?resize=768%2C432")
+   background-image: url('./assets/fondo.jpg');
+   background-size: 1024px 768px;
    
 }
 
